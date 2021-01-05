@@ -1,0 +1,9 @@
+{
+    "description": "Some basic image",
+    "tags": [
+        "Test",
+        "tags"
+    ],
+    "image": "1.jpg",
+    "date": "1609678772341"
+}
