@@ -6,11 +6,14 @@ export default function Search({value, onChange}) {
 
     if (!search) {
         return (
-            <button className="searchbutton" onClick={() => setSearch(true)}><SearchIcon /></button>
+            <button aria-label="Search" className="searchbutton" onClick={() => setSearch(true)}><SearchIcon /></button>
         )
     }
 
     return (
-        <input className="searchinput" type="text" value={value} onChange={onChange} />
+        <div className="activesearch">
+            <button aria-label="Search"  className="searchbutton" onClick={() => setSearch(false)}><SearchIcon /></button>
+            <input className="searchinput" type="text" value={value} onChange={onChange} />
+        </div>
     )
 }

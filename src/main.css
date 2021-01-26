@@ -24,12 +24,31 @@ header {
     padding: .83em 0;
 }
 
+.activesearch {
+    margin: auto;
+    text-align: center;
+}
+
 .searchbutton {
     margin: auto;
     display: block;
     background-color: white;
     border-radius: 50px;
     padding: 5px;
+}
+
+.activesearch .searchbutton {
+    display: inline;
+    margin: 0 4px;
+    margin-right: 0;
+    vertical-align: middle;
+    position: relative;
+    left: 5px;
+}
+
+.activesearch .searchinput {
+    border-left: 0;
+    padding-left: 8px;
 }
 
 .searchicon {
@@ -54,6 +73,10 @@ header {
     width: 75%;
 }
 
+.activesearch .searchinput {
+    display: inline;
+}
+
 .mainarea {
     padding-top: 10px;
 }
@@ -72,11 +95,6 @@ header {
         padding: 20px;
         grid-template-columns: repeat(3, 250px);
     }
-
-    .document .bookimage a:after {
-        bottom: 15px;
-        left: 180px;
-    }
 }
 
 .bookimage {
@@ -84,10 +102,6 @@ header {
     padding: 20px;
     max-width: 250px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-.bookimage div {
-    margin-top: 8px;
 }
 
 .bookimage a {
@@ -116,7 +130,7 @@ header {
     background-color: rgba(247, 248, 203, 0.6);
     position: absolute;
     bottom: 15px;
-    left: 215px;
+    left: 180px;
     transform: translateX(-30%) translateY(10%) rotate(-45deg);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }

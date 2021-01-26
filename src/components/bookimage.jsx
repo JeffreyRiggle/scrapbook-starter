@@ -15,6 +15,9 @@ export default function BookImage({filename, description}) {
                 fluid {
                   ...GatsbyImageSharpFluid
                 }
+                fixed(width: 210) {
+                  ...GatsbyImageSharpFixed
+                }
               }
             }
           }
@@ -31,7 +34,7 @@ export default function BookImage({filename, description}) {
 
       return (
         <div className="bookimage">
-          <a href={image.node.childImageSharp.fluid.src} target="_blank"><Img alt={description} fluid={image.node.childImageSharp.fluid} /></a>
+          <a href={image.node.childImageSharp.fluid.src} target="_blank" rel="noreferrer"><Img alt={description} fixed={image.node.childImageSharp.fixed} /></a>
           <div>{description}</div>
         </div>
       )
